@@ -44,6 +44,14 @@
 			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
 		
+		<!-- Autoconfiguration 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		 -->
+		
 		<!-- enables XML output of resource, according to Accept header
 			Everything was configured by Boot for us
 		 -->
