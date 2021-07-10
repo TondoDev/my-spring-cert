@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 // prefix of configuration entries, rest will be resolved by field names
 //limits-service.minimum=5
 //limits-service.maximum=900
+// If used with spring cloud config server, this must match the property file on config server
 @Component // makes spring bean from this
 @ConfigurationProperties("limits-service")
 public class Configuration {
