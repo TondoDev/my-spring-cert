@@ -1,13 +1,23 @@
-package org.tondo.bootms.exchange.controller;
+package org.tondo.bootms.exchange.data;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class CurrencyExchange {
 
+	@Id
 	private Long id;
+	// because From is SQL keyword, and scripts for table generation 
+	// get confused
+	@Column(name="currency_from")
 	private String from;
+	@Column(name="currency_to")
 	private String to;
-	private BigDecimal conversionMultipe;
+	private BigDecimal conversionMultiple;
 	// for marking instance of service
 	private String environment;
 	
@@ -17,12 +27,12 @@ public class CurrencyExchange {
 	}
 	
 	
-	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultipe) {
+	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
-		this.conversionMultipe = conversionMultipe;
+		this.conversionMultiple = conversionMultiple;
 	}
 	
 	
@@ -44,11 +54,11 @@ public class CurrencyExchange {
 	public void setTo(String to) {
 		this.to = to;
 	}
-	public BigDecimal getConversionMultipe() {
-		return conversionMultipe;
+	public BigDecimal getConversionMultiple() {
+		return conversionMultiple;
 	}
-	public void setConversionMultipe(BigDecimal conversionMultipe) {
-		this.conversionMultipe = conversionMultipe;
+	public void setConversionMultiple(BigDecimal conversionMultiple) {
+		this.conversionMultiple = conversionMultiple;
 	}
 	
 	
